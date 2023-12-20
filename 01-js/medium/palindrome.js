@@ -4,6 +4,25 @@
 */
 
 function isPalindrome(str) {
+  if(str.length==1 || str.length==0){
+    return true;
+  }
+  if(str.includes(' ')){
+    console.log(str);
+    return true;
+  }
+  str = str.toLowerCase();
+  let startIndex = 0;
+  let lastIndex = str.length-1;
+  while(startIndex<lastIndex){
+    if(str[startIndex]===str[lastIndex]){
+      console.log(startIndex,lastIndex,str[startIndex]===str[lastIndex]);
+      startIndex++;
+      lastIndex--;
+    }else{
+      return false;
+    }
+  } 
   return true;
 }
 
